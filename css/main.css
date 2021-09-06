@@ -10,6 +10,14 @@ body{
     font-size: 50px;
     font-weight: bolder;
 }
+@media(max-width:520px){
+    .container h1{
+        font-size: 44px;
+    }
+    body .mood{
+        font-size: 33px;
+    }
+}
 @media(max-width:320px){
     .container h1{
         font-size: 40px;
