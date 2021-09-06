@@ -1,0 +1,31 @@
+body{
+    background-color:rgb(47, 138, 241);
+}
+.container{
+    background-color: white;
+    margin-top: 15px;
+}
+.container h1{
+    font-family: fantasy;
+    font-size: 70px;
+}
+.form-control{
+    width: 85%;
+    margin: auto;
+}
+
+.con1{
+    background-color:rgb(47, 138, 241);
+}
+.card{
+    border: none;
+
+}
+.fas{
+    font-size: 40px;
+    position: absolute;
+    right: 5px;
+    color: black ;
+    z-index: 555;
+}
+
