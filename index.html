@@ -12,15 +12,21 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/all.min.css">
+    <!--animate-->
+    <link rel="stylesheet" href="./css/animate.css">
+
+
 
     <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
-    <i id="mood1" class="mood fas fa-lightbulb"></i>
+    <i id="mood1" class="wow pulse animated mood fas fa-lightbulb"
+        style="visibility: visible; animation-duration: 1500ms; animation-iteration-count: infinite; animation-name: pulse;">
+        </i>
     <div id="cont" class="container col-md-6 mb-3">
 
-        <h1 id="todo" class="col-xl-12 col-md-10 text-center">TODOLIST</h1>
+        <h1 id="todo" class="wow fadeInDown col-xl-12 col-md-10 text-center">TODOLIST</h1>
         <div id="card1" class="card">
             <div class="card-body">
                 <div class="form-group row">
@@ -41,6 +47,9 @@
 
         </div>
     </div>
+    <div id="btns" class="col-md-8 mx-auto mt-3"></div>
+    <script src="./java/jquery-3.6.0.min.js"></script>
+    <script src="./java/wow.min.js"></script>
     <script src="./java/java.js"></script>
 </body>
 

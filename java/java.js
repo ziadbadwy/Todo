@@ -8,6 +8,14 @@ let container = document.getElementById('cont');
 let h1 = document.getElementById('todo');
 let card1 = document.getElementById('card1');
 let card2 = document.getElementById('card2');
+let btns = document.getElementById('btns');
+let ptasks = document.getElementById('ptasks');
+let btnall = document.getElementById('btnall');
+let tasksid = document.getElementById('tasksid');
+new WOW().init();
+
+
+
 
 
 
@@ -19,34 +27,51 @@ let card2 = document.getElementById('card2');
 
 let addTask = ()=>{
    let task_data=inputData.value;
-   if(task_data.trim() =="" || task_data.length<4||task_data.length>80 ){
+   if(task_data.trim() =="" || task_data.length<3||task_data.length>80 ){
        alert('Please Enter Valid Data');
    }else{
        NoTasks.style.display = "none";
-
-       all_tasks.innerHTML += `<div class = "tasks_div alert alert-primary"> <p class = "alltsk">${task_data}</p>
-      <button   style="margin-top:-38px ;" class="del btn btn-danger float-right">Delete</button>
-      </div>`
+       btns.style.display= "block";
+       all_tasks.style.display="block";
+       all_tasks.innerHTML += `
+       <div id="tasksid" class  = "tasks_div alert alert-primary"> <p id="ptasks" class = "alltsk">${task_data}</p>
+       <button   style="margin-top:-38px ;" class="del btn btn-danger float-right">Delete</button>
+       </div>`
+       btns.innerHTML = `<div class = " mx-auto alert alert-warning w-50">
+       <div class="row botns"  >
+       <button    class="delb ml-2 btn btn-danger  float-right">Delete Marked</button>
+       <button  id= "btnall"  class="delb delb2 ml-2 btn btn-danger  ">Delete All</button>
+       </div>
+       </div>`
       inputData.value="";
    }
 }
 let show2 =()=>{
     if(all_tasks.childElementCount ==  0){
         NoTasks.style.display = "block";
+        btns.style.display = "none";
+
 
     }
 }
 document.addEventListener('click',function(e){
-    if(e.target.classList.contains('tasks_div')){
-        if(all_tasks.style.textDecorationLine=="none"){
-            all_tasks.children[i].style.textDecorationLine = "line-through";
-        }
-        else{
-            all_tasks.style.textDecorationLine = "none";
-
-        }
+    if(e.target.classList.contains('alltsk')){
+       e.target.parentElement.style.backgroundColor="rgb(255, 187, 162)";
+      
     }
+    
 })
+document.addEventListener('click',function(e){
+    if(e.target.classList.contains('alltsk')){
+        //alwan
+       if(ptasks.parentElement.style.backgroundColor=="rgb(255, 187, 162)"){
+        ptasks.parentElement.style.backgroundColor=="black";
+       }
+      
+    }
+    
+})
+
 document.addEventListener('click',function(e){
     if(e.target.classList.contains('mood')){
         if(this.body.style.backgroundColor=="rgb(47, 138, 241)"){
@@ -82,6 +107,32 @@ document.addEventListener('click',function(e){
 
   }
 })
+document.addEventListener('click',function(e){
+    if(e.target.classList.contains('delb2')){
+       
+        btns.style.display= "none";
+        all_tasks.style.display="none";
+                   
+        NoTasks.style.display="block";
+        //remove
+             while(true){
+                 let i=0;
+            if(all_tasks.childElementCount>0){
+            all_tasks.children[i].remove();
+            }
+            else if(all_tasks.childElementCount<i){
+                i=0;
+            }
+            if(all_tasks.childElementCount==0){
+                break;
+            }
+
+        } 
+  
+    }
+   
+  })
+  
 
 
 

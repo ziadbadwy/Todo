@@ -4,11 +4,26 @@ body{
 .container{
     background-color: white;
     margin-top: 15px;
+    
 }
 .container h1{
     font-family: 'Times New Roman', Times, serif;
-    font-size: 50px;
+    font-size: 70px;
     font-weight: bolder;
+}
+@media(max-width:770px){
+
+.botns{
+    justify-content: center;
+}
+.delb{
+    width: 60%;
+    font-size: 8px ;
+    
+  }
+  .delb2{
+    margin-top: 10px;
+}
 }
 @media(max-width:520px){
     .container h1{
@@ -17,6 +32,18 @@ body{
     body .mood{
         font-size: 33px;
     }
+    .delb{
+      width: 60%;
+      font-size: 8px ;
+      
+    }
+    .botns{
+justify-content: center;    
+
+}
+.delb2{
+    margin-top: 10px;
+}
 }
 @media(max-width:320px){
     .container h1{
@@ -52,4 +79,8 @@ body{
     color: black ;
     z-index: 555;
 }
+.botns{
+    justify-content: center;
+}
+
 
