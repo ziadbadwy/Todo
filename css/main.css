@@ -44,6 +44,9 @@ justify-content: center;
 .delb2{
     margin-top: 10px;
 }
+.alltsk{
+  width:50%;
+}
 }
 @media(max-width:320px){
     .container h1{
@@ -52,6 +55,9 @@ justify-content: center;
     body .mood{
         font-size: 28px;
     }
+    .alltsk{
+        width:50%;
+      }
 }
 @media(max-width:280px){
      .add{

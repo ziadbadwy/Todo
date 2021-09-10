@@ -24,10 +24,9 @@ new WOW().init();
 //background-color: rgb(29, 29, 29);
 
 
-
 let addTask = ()=>{
    let task_data=inputData.value;
-   if(task_data.trim() =="" || task_data.length<3||task_data.length>80 ){
+   if(inputData.value=="" || task_data.length<3||task_data.length>80 ){
        alert('Please Enter Valid Data');
    }else{
        NoTasks.style.display = "none";
