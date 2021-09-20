@@ -55,7 +55,7 @@ let addTask = ()=>{
         </button>
       </div>
       <div class="modal-body">
-        <p>1-press on the text that you want to delete tasks by using the button "Delete Marked".<p>
+        <p>1-press on the text that you want to delete by using the button "Delete Marked".<p>
         <p>2-the button "Delete All" used to delete all tasks.</p>
         <p>3-the light bulb used for switching between dark mood and light mood</p>
         <p>4-you cant add less than 3 characters</p>
