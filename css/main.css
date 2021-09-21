@@ -1,7 +1,13 @@
 
-body{
+body
+{
    background-color:rgb(47, 138, 241);
+   transition: 2s;
 
+
+}
+.card{
+    transition: 1s;
 }
 .container{
     margin-top: 15px;
@@ -15,22 +21,18 @@ body{
     
 
 }
-.lineSsss{
-    text-decoration-line: line-through;
 
-}
-.chng_color{  
-    background-color: rgb(255, 187, 162);
-
-}
 .main-color{
     background-color: #cce5ff;
+}
+.chng_color{  
+    background-color: rgb(247, 143, 129);
+    color:white;
+    text-decoration-line: line-through;
 }
 .con1{
     border-radius: 20px !important;
 }
-
-
 .HOW-btn{
     display:flex;
     justify-content: center;

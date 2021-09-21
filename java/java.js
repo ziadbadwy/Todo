@@ -12,10 +12,6 @@ let btns = document.getElementById('btns');
 let ptasks = document.getElementById('ptasks');
 let btnall = document.getElementById('btnall');
 let tasksid = document.getElementById('tasksid');
-let QUS = document.getElementById('QUS');
-let MODAL12 = document.getElementById('MODAL12');
-
-
 
 new WOW().init();
 //background-color: rgb(29, 29, 29);
@@ -28,9 +24,9 @@ let addTask = ()=>{
        btns.style.display= "block";
        all_tasks.style.display="block";
        all_tasks.innerHTML += `
-       <div id="tasksid" class  = "alert  main-color"> <p id="ptasks" class = " alltsk">${task_data}</p>
-       <button   style="margin-top:-38px ;" class="del btn btn-danger float-right">Delete</button>
-       </div>`
+       <div id="tasksid" class  = "alert  main-color">${task_data}
+       <button   style="margin-top:-7px !important;" class="del btn btn-danger float-right">Delete</button>
+       </div>`;
        btns.innerHTML = `<div class = " mx-auto alert alert-warning w-50">
        <div class="row botns"  >
        <button    class="marked delb ml-2 btn btn-danger  float-right">Delete Marked</button>
@@ -67,7 +63,7 @@ let addTask = ()=>{
     </div>
   </div>
 </div>
-       </div>`
+       </div>`;
       inputData.value="";
    }
 }
@@ -77,37 +73,17 @@ let show2 =()=>{
         btns.style.display = "none";
     }
 }
-//so2al
-document.addEventListener('click',function(e){
-    if(e.target.classList.contains('main-color')){
-        e.target.classList.toggle('main-color',false);
-        e.target.classList.toggle('chng_color',true);
-        e.target.classList.toggle('alltsk',false);
-        e.target.classList.toggle('lineSsss',true);
-    }
-     if(e.target.classList.contains('alltsk')){
-        e.target.parentElement.classList.toggle('main-color',false);
-        e.target.parentElement.classList.toggle('chng_color',true);
-        e.target.classList.toggle('alltsk',false);
-        e.target.classList.toggle('lineSsss',true);
-     }
-    
-});
-/*document.addEventListener('click',function(e){
-    if(e.target.classList.contains('lineSsss') ){
-         e.target.parentElement.classList.toggle('chng_color',false);
-         e.target.parentElement.classList.toggle('main-color',true);
-         e.target.classList.toggle('lineSsss',false);
-         e.target.classList.toggle('alltsk',true);
-    }
-    
-});*/
+document.addEventListener('click' , function(e){
+  if(e.target.classList.contains('main-color')){
+      e.target.classList.toggle('chng_color')
+  }
+})
 document.addEventListener('click',function(e){
     if(e.target.classList.contains('mood')){
         if(container.style.backgroundColor=="white"){
         this.body.style.backgroundColor = "black";
         mood1.style.color ="rgb(47, 138, 241)";
-        con11.style.backgroundColor ="black";
+        con11.style.backgroundColor ="rgb(29, 29, 29)";
         container.style.backgroundColor=" rgb(29, 29, 29)";
         h1.style.color="white";
         card1.style.backgroundColor="rgb(29, 29, 29)";
@@ -116,7 +92,7 @@ document.addEventListener('click',function(e){
         else{
             this.body.style.backgroundColor="rgb(47, 138, 241)";
             mood1.style.color ="black";
-            con11.style.backgroundColor ="rgb(47, 138, 241)";
+            con11.style.backgroundColor ="white";
             container.style.backgroundColor="white";
             h1.style.color="black";
             card1.style.backgroundColor="white";
@@ -152,7 +128,6 @@ document.addEventListener('click',function(e){
     if(e.target.classList.contains('marked')){       
         //remove-selected
         let i=0;
-        let j =0;
         while(true){
             if(all_tasks.children[i].classList.contains('chng_color')){
                 all_tasks.children[i].remove();
@@ -161,15 +136,11 @@ document.addEventListener('click',function(e){
             else{
                 i++;
             }
-           
-            
             if(all_tasks.childElementCount==0){
                 btns.style.display= "none";
                 NoTasks.style.display="block";
                    break;
                }
-              
-
         }
         
     }
